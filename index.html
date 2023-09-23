@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
+    <title>Fancy Snowflakes</title>
+</head>
+<body>
+    <h1>FANCY SNOWFLAKES</h1>
+
+    <h2> Parameters </h2>
+
+    <form action="./fractale.html" method="GET">
+
+        <div class="form-input">
+            <label>Shape : </label>
+            <select name="shape">
+                <option value="cube">Cube</option>
+                <option value="tetrahedron">Tetrahedron</option>
+                <option value="isocahedron">Isocahedron</option>
+                <option value="octahedron">Octahedron</option>
+                <option value="dodecahedron">Dodecahedron</option>
+            </select>
+        </div>
+
+        <div class="form-input">
+            <label>X-axis sub-shapes scaling : </label>
+            <input name="x" type="range" min="0.5" max="3" step="0.1" value="2" oninput="this.nextElementSibling.value = '1/'+this.value" />
+            <output>1/2</output>
+        </div>
+
+        <div class="form-input">
+            <label>Y-axis sub-shapes scaling : </label>
+            <input name="y" type="range" min="0.5" max="3" step="0.1" value="2" oninput="this.nextElementSibling.value = '1/'+this.value" />
+            <output>1/2</output>
+        </div>
+
+        <div class="form-input">
+            <label>Z-axis sub-shapes scaling : </label>
+            <input name="z" type="range" min="0.5" max="3" step="0.1" value="2" oninput="this.nextElementSibling.value = '1/'+this.value" />
+            <output>1/2</output>
+        </div>
+
+        <div class="form-input">
+            <label>Iterations : </label>
+            <input name="iter" type="range" min="1" max="6" step="1" value="4" oninput="this.nextElementSibling.value = this.value" />
+            <output>4</output>
+        </div>
+
+        <div class="form-input">
+            <label>Probability : </label>
+            <input name="probability" type="range" min="0" max="10" step="0.1" value="2" oninput="this.nextElementSibling.value = '1/'+this.value" />
+            <output>1/2</output>
+        </div>
+
+        <div class="form-input">
+            <label>Wireframe : </label>
+            <input name="wireframe" type="checkbox" />
+        </div>
+
+        <div class="form-input submit-button">
+            <input type="submit" value="GENERATE">
+        </div>
+    </form>
+
+    <h2>Cool outputs examples</h2>
+
+    <div class="links">
+        <a href="fractale.html?iter=5&wireframe=d&probability=2&shape=dodecahedron">Dodecahedron • 1/2 • 1/2 • 1/2 • 5 • 1/2 • off</a>
+        <a href="fractale.html?shape=cube&x=1.5&y=2.6&z=2.5&iter=6&probability=1.2">Cube • 1/1.5 • 1/2.5 • 1/2.5 • 6 • 1/1.2 • off</a>
+        <a href="fractale.html?shape=isocahedron&x=1.1&y=2&z=2&iter=5&probability=3&wireframe=on">Isocahedron • 1/1.1 • 1/2 • 1/2 • 5 • 1/3 • on</a>
+        <a href="fractale.html?shape=tetrahedron&x=2&y=2&z=2&iter=6&probability=0&wireframe=on">Tetrahedron • 1/2 • 1/2 • 1/2 • 6 • 1/0 • on</a>
+        <a href="fractale.html?shape=octahedron&x=2.2&y=1.2&z=2.2&iter=6&probability=3">Octahedron • 1/2.2 • 1/1.2 • 1/2.2 • 6 • 1/3 • off</a>
+    </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='./index.css'>
+    </head>
+<body>
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three/examples/jsm/",
+          "OrbitControls": "https://unpkg.com/three/examples/jsm/controls/OrbitControls.js",
+          "TrackballControls": "https://unpkg.com/three/examples/jsm/controls/TrackballControls.js"
+        }
+      }
+    </script>
+    <script type='module' src='index.js'></script>
+</body>
+</html>
